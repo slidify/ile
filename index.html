@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Learning Environment</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Interactive Learning Environment">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Interactive Learning Environment</h1>
+    <h2>Teaching R</h2>
+    <p>Ramnath Vaidyanathan<br/>Assistant Professor, McGill University</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li>Author lesson using R Markdown.</li>
+<li>Embed interactive components</li>
+<li>Record lesson as screencast.</li>
+<li>Sync screencast with slides.</li>
+<li>Publish lesson online.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>This is a short demo of an integrated learning environment for teaching R. </p>
+
+<p>The basic idea is to author a lesson using R Markdown, embed interactive components like quizzes and consoles seamlessly, record the lesson as a screencast, sync the screencast with the slides, and publish it online.</p>
+
+<p>Just to illustrate the basic idea, let me give you a two slide lesson on using ggplot2 and googleVis Note that the video is synced to the slides, and so the lesson will automatically advance. Just sit back and relax!</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>ggplot2</h2>
+  </hgroup>
+  <article data-timings="">
+     
+<div class='row-fluid'>
+  <div class='span5'>
+    <form id="knitForm2" data-cell="2">
+      <p><textarea class='interactive' id='interactive2' data-cell='2' data-results='markup' style='display:none'>require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+</textarea></p>
+
+<ul class = "build incremental">
+<li>Color the points based on the variable <code>cyl</code></li>
+</ul>
+<br/>
+      <div id='aceeditor2' style="height:px;"></div>
+      <div class='interactive btn-toolbar pull-left'>
+        <div class='btn-group'>
+          <a class='btn btn-small action-button' id='runCode2' data-action='runCode'
+            data-cell='2' rel='tooltip' data-title='Run Code'>
+            <i class='icon-play'></i>
+          </a>
+          <a class='btn btn-small iBtn' id='testCode2' data-action='testCode'
+             data-cell='2' rel='tooltip' data-title='Test Code'>
+            <i class='icon-check'></i>
+          </a>
+          <a class='btn btn-small iBtn' id='clearResult2' data-action='clearResult'
+             data-cell='2' rel='tooltip' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='btn  btn-small iBtn' id='getHint2' rel='tooltip' 
+            data-title="Get Hint" data-action='getHint'
+            data-cell='2' data-hint="&lt;p&gt;The solutions is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;qplot(wt, mpg, data = mtcars, color = cyl)
+&lt;/code&gt;&lt;/pre&gt;
+">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div>
+      </div>    </form>
+  </div>
+  <div class='span7'>
+    <div id="knitResult2" class='shiny-html-output'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>In your first mini lesson, you are going to be creating a scatterplot using ggplot2, the finest plotting package across multiple languages. Let us start by creating a scatterplot of weight vs. mileage for cars in the <code>mtcars</code> dataset which ships with R.</p>
+
+<p>We first load <code>ggplot2</code> and then use the quick plot function to specify the x variable, which is <code>wt</code>, the y variable which is <code>mpg</code>, the dataset <code>mtcars</code>. If you hit the run button, you will see a nice scatterplot of weight vs. mileage.</p>
+
+<p>Now, what if you wanted to enhance this scatterplot by color coding the points based on the number of cylinders the engine has. Well, you can do it easily by just adding the argument color and setting it to the variable cyl. Why don&#39;t you try it yourself? If you need a hint, press the button with the bookmark sign on it. This video will pause now so that you can try it out. When you are done, press the play button so that we can resume.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>googleVis</h2>
+  </hgroup>
+  <article data-timings="">
+     
+<div class='row-fluid'>
+  <div class='span5'>
+    <form id="knitForm3" data-cell="3">
+      <p><textarea class='interactive' id='interactive3' data-cell='3' data-results='asis' style='display:none'>require(googleVis)
+M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
+print(M1, tag = &#39;chart&#39;)
+</textarea></p>
+<br/>
+      <div id='aceeditor3' style="height:px;"></div>
+      <div class='interactive btn-toolbar pull-left'>
+        <div class='btn-group'>
+          <a class='btn btn-small action-button' id='runCode3' data-action='runCode'
+            data-cell='3' rel='tooltip' data-title='Run Code'>
+            <i class='icon-play'></i>
+          </a>
+          <a class='btn btn-small iBtn' id='testCode3' data-action='testCode'
+             data-cell='3' rel='tooltip' data-title='Test Code'>
+            <i class='icon-check'></i>
+          </a>
+          <a class='btn btn-small iBtn' id='clearResult3' data-action='clearResult'
+             data-cell='3' rel='tooltip' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='btn  btn-small iBtn' id='getHint3' rel='tooltip' 
+            data-title="Get Hint" data-action='getHint'
+            data-cell='3' data-hint="">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div>
+      </div>    </form>
+  </div>
+  <div class='span7'>
+    <div id="knitResult3" class='shiny-html-output'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Let us now try a motion chart using <code>googleVis</code> another great package. We are using the Fruits dataset. The name of the fruit acts as the id variable, and the year is the time variabe for the motion chart. If we hit the run button now, you will see a nice motion chart on the slide. It is your turn to try it now. Press the play button to resume the lesson.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Credits</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li><a href="http://github.com/yihui/knitr">knitr</a></li>
+<li><a href="http://github.com/rstudio/markdown">markdown</a></li>
+<li><a href="http://opencpu.org">OpenCPU</a></li>
+<li><a href="http://github.com/rstudio/shiny">Shiny</a></li>
+<li><a href="http://popcornjs.org/">PopcornJS</a></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Thanks for watching this demo. It is still just a prototype and I would love to get some feedback. This demo uses several open-source projects, and I would like to give them due credit. </p>
+
+<p>First, I would like to acknowledge the <code>knitr</code> and <code>markdown</code> packages, which provide a simple, elegant authoring environment. </p>
+
+<p>Second, I would like to credit OpenCPU and Shiny, which allow R code to be executed on the server. This demo uses OpenCPU, but you can also run it from your laptop using Shiny.</p>
+
+<p>Finally, I would like to thank Mozilla for PopcornJS, which makes it super easy to sync an html document with a video.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<style>
+section.video {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+</style>
+
+<p><section class="video" id="video">
+  <div id='player' style='width:200px;height:150px;'></div>
+</section></p>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Summary'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='ggplot2'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='googleVis'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Credits'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+<script src="libraries/widgets/popcornjs/js/popcorn-complete.min.js"></script>
+<script src="libraries/widgets/popcornjs/js/popcorn-custom.js"></script>
+<script src="./assets/js/app.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <!-- <script src="libraries/widgets/popcornjs/js/popcorn-complete.min.js"></script>
+  <script src="libraries/widgets/popcornjs/js/popcorn-custom.js"></script> -->
+  <script>
+var pop = Popcorn.youtube(
+  "player",
+  "http://youtu.be/9ubJSXKDMM4"
+);
+pop.on('play', function(){
+  slidedeck.timings[0].time = new Date().getTime();
+});
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
