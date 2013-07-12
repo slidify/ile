@@ -14,11 +14,11 @@ Click [here](http://slidify.github.io/ile) to be taken to a video-sycned slide d
 
 #### Credits
 
-> 1. [knitr](http://github.com/yihui/knitr)
-> 2. [markdown](http://github.com/rstudio/markdown)
-> 3. [OpenCPU](http://opencpu.org)
-> 4. [Shiny](http://github.com/rstudio/shiny)
-> 5. [PopcornJS](http://popcornjs.org/)
+1. [knitr](http://github.com/yihui/knitr)
+2. [markdown](http://github.com/rstudio/markdown)
+3. [OpenCPU](http://opencpu.org)
+4. [Shiny](http://github.com/rstudio/shiny)
+5. [PopcornJS](http://popcornjs.org/)
 
 
 Thanks for watching this demo. It is still just a prototype and I would love to get some feedback. This demo uses several open-source projects, and I would like to give them due credit. 
