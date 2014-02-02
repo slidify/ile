@@ -1,3 +1,6 @@
+__Note__: The interactive R console in the slides are broken due to changes in the OpenCPU API. I will be updating the OpenCPU bindings, after which this should start working again. No changes to the Slidify API are expected.
+
+
 ## Integrated Learning Environment
 
 This is a short demo of an integrated learning environment for teaching R. 
