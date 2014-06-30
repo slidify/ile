@@ -8,7 +8,7 @@ function getHint(cell){
 
 // Clear Result
 function clearResult(cell){
-  $('#knitResult' + cell).html("");
+  $('#knitResult' + cell).attr("src", "");
   if (window.Shiny != undefined){
     Shiny.unbindAll();
     $("#runCode" + cell).data('val', 0);
@@ -122,14 +122,14 @@ function runCode(cell){
     url = "http://public.opencpu.org/R/pub/base/identity/ascii",
     script = 'library(knitr)\n' +
     'knit2html(text = knit(text = "' + chunk + '"), fragment.only = TRUE)';
-    
-  /* Send the data using POST and put the results in a div */
-  $.post(url, {x: script},
-    function(data){
-      $(resultEl).html(eval(data));
-      $('pre code').each(function(i, e){
-        hljs.highlightBlock(e);
-      })
-  })
-  .error(function() { alert("An error occured")}); 
+  console.log(chunk)
+  ocpu.seturl("//opencpu.ocpu.io/markdownapp/R")
+  var req = ocpu.call("rmdtext", {
+      text : chunk
+    }, function(session){
+      console.log(session.getFileURL("output.html"))
+      $(resultEl).attr('src', session.getFileURL("output.html"))     
+    }).fail(function(text){
+      alert("Error: " + req.responseText);
+    });
 }

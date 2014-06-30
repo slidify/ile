@@ -81,13 +81,12 @@
   <div class='span5'>
     <form id="knitForm2" data-cell="2">
       <p><textarea class='interactive' id='interactive2' data-cell='2' data-results='markup' style='display:none'>require(ggplot2)
-qplot(wt, mpg, data = mtcars)
-</textarea></p>
+qplot(wt, mpg, data = mtcars)</textarea></p>
 
 <ul class = "build incremental">
 <li>Color the points based on the variable <code>cyl</code></li>
 </ul>
-<br/>
+
       <div id='aceeditor2' style="height:px;"></div>
       <div class='interactive btn-toolbar pull-left'>
         <div class='btn-group'>
@@ -116,7 +115,7 @@ qplot(wt, mpg, data = mtcars)
       </div>    </form>
   </div>
   <div class='span7'>
-    <div id="knitResult2" class='shiny-html-output'></div>
+    <iframe id="knitResult2" class='shiny-html-output'></iframe>
   </div>
 </div>
   </article>
@@ -144,9 +143,8 @@ qplot(wt, mpg, data = mtcars)
     <form id="knitForm3" data-cell="3">
       <p><textarea class='interactive' id='interactive3' data-cell='3' data-results='asis' style='display:none'>require(googleVis)
 M1 &lt;- gvisMotionChart(Fruits, idvar = &#39;Fruit&#39;, timevar = &#39;Year&#39;)
-print(M1, tag = &#39;chart&#39;)
-</textarea></p>
-<br/>
+print(M1, tag = &#39;chart&#39;)</textarea></p>
+
       <div id='aceeditor3' style="height:px;"></div>
       <div class='interactive btn-toolbar pull-left'>
         <div class='btn-group'>
@@ -171,7 +169,7 @@ print(M1, tag = &#39;chart&#39;)
       </div>    </form>
   </div>
   <div class='span7'>
-    <div id="knitResult3" class='shiny-html-output'></div>
+    <iframe id="knitResult3" class='shiny-html-output'></iframe>
   </div>
 </div>
   </article>
@@ -275,6 +273,7 @@ section.video {
 <script src="libraries/widgets/quiz/js/mustache.min.js"></script>
 <script src="libraries/widgets/quiz/js/quiz-app.js"></script>
 <script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/opencpu-0.5.js"></script>
 <script src="libraries/widgets/interactive/js/interactive.js"></script>
 <script src="libraries/widgets/popcornjs/js/popcorn-complete.min.js"></script>
 <script src="libraries/widgets/popcornjs/js/popcorn-custom.js"></script>

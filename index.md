@@ -36,9 +36,7 @@ Just to illustrate the basic idea, let me give you a two slide lesson on using g
 ## ggplot2
 
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='markup' style='display:none'>require(ggplot2)
-qplot(wt, mpg, data = mtcars)
-</textarea>
-
+qplot(wt, mpg, data = mtcars)</textarea>
 
 > - Color the points based on the variable `cyl`
 
@@ -64,9 +62,7 @@ Now, what if you wanted to enhance this scatterplot by color coding the points b
 
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>require(googleVis)
 M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1, tag = 'chart')
-</textarea>
-
+print(M1, tag = 'chart')</textarea>
 
 *** =pnotes
 
